@@ -1,8 +1,9 @@
 import './SCSS/style.scss';
-import Icon from './asset/images/app_screenshoot.png';
+import Icon from './asset/images/app_screenshot.png';
 
 
-const myIcon = new Image();
-myIcon.src = Icon;
-const element = document.body;
-element.appendChild(myIcon);
+const image = document.getElementById('img');
+image.src = Icon;
+
+
+
