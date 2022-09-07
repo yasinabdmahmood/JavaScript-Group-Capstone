@@ -2,19 +2,19 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: {
-    main: "./src/index.js",
+    main: './src/index.js',
   },
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: '[name][ext]',
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, 'dist'),
     },
     open: true,
     hot: true,
@@ -24,24 +24,24 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Javascript capstone",
-      template: "./src/template.html",
-      filename: "index.html",
+      title: 'Javascript capstone',
+      template: './src/template.html',
+      filename: 'index.html',
     }),
   ],
   module: {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         test: /\.scss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
     ],
   },
