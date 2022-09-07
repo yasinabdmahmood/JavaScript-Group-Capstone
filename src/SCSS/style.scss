@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Lobster:regular);
+
 * {
   margin: 0;
   padding: 0;
@@ -22,14 +23,17 @@ h1 {
     padding-right: 10px;
     box-shadow: 1px 2px 5px 5px rgb(185, 183, 183);
     min-height: 60px;
-    .nav-links{
+
+    .nav-links {
       font-size: 20px;
       display: flex;
       column-gap: 20px;
+
       a {
         text-decoration-line: none;
       }
     }
+
     .logo {
       font-family: 'Lobster', cursive;
       color: orangered;
@@ -37,6 +41,7 @@ h1 {
       font-style: italic;
     }
   }
+
   footer {
     padding: 10px;
     margin-top: 450px;
