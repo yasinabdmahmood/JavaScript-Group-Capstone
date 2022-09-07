@@ -7,10 +7,13 @@
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
+- HTML
+- SCSS
+- Modern JavaScript
+- Linters
+- Webpack bundler
+- Kanban Board
+- TheMealDB API
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
@@ -40,17 +43,10 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Degisew**
+- GitHub: [degisew](https://github.com/degisew)
+- Twitter: [@DJ_etiya](https://twitter.com/Degisew-mengist)
+- LinkedIn: [jegisew21](https://www.linkedin.com/in/degisew-mengist-003298802)
 
 ## 🤝 Contributing
 
