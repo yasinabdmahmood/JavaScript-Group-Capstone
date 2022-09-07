@@ -14,6 +14,14 @@ h1 {
   text-align: center;
 }
 
+.card img {
+  width: 100%;
+}
+
+.name-like img {
+  width: 30px;
+}
+
 .main-container {
   #header {
     display: flex;
@@ -39,8 +47,8 @@ h1 {
       color: orangered;
       font-size: 100px;
       font-style: italic;
-      
-      img{
+
+      img {
         width: 100px;
       }
     }
@@ -48,58 +56,51 @@ h1 {
 
   footer {
     padding: 10px;
-   
     border: 5px solid black;
   }
 }
-.container{
+
+.container {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   row-gap: 1rem;
- 
   justify-content: space-between;
 }
-.card{
- width: 32%;
+
+.card {
+  width: 32%;
   display: flex;
- 
   box-sizing: border-box;
   flex-direction: column;
   padding: 2rem;
   background-color: lightblue;
   border-radius: 2rem;
-
 }
 
-.card img{
-  width: 100%;
-  
-}
-.name-like{
+.name-like {
   margin: 1rem;
   display: flex;
   justify-content: space-between;
+}
 
-}
-.name-like span{
+.name-like span {
   font-size: 1rem;
   font-weight: 700;
 }
-.name-like img{
-  width: 30px;
-}
-.like p{
+
+.like p {
   font-weight: 700;
 }
-.comment-button{
-  padding:0.5rem;
-  font-size: 1rem;
-  margin: 0.5rem;
-}
-.reservation-button{
+
+.comment-button {
   padding: 0.5rem;
   font-size: 1rem;
   margin: 0.5rem;
 }
 
+.reservation-button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
