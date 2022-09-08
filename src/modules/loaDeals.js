@@ -2,19 +2,18 @@ import getMealInfoArray from './getMealInfoArray.js';
 import heart from '../asset/images/heart-regular.svg';
 import addLike from './addLike.js';
 
-const loadMeals = (arr) => {
-     const myPromise = new Promise((myResolve) => {
-      myResolve(getMealInfoArray());
-    });
-    myPromise.then((result) => {
-      result.mealInfo.sort((a,b) => parseInt(a.idMeal)-parseInt(b.idMeal));
-      result.likes.sort((a,b) => parseInt(a.item_id)-parseInt(b.item_id));
-      console.log(result.likes)
-      
-      let cards=``;
-      
-      result.mealInfo.forEach((el,index)=>{
-        const card = `<div class="card">
+const loadMeals = () => {
+  const myPromise = new Promise((myResolve) => {
+    myResolve(getMealInfoArray());
+  });
+  myPromise.then((result) => {
+    result.mealInfo.sort((a, b) => parseInt(a.idMeal, 10) - parseInt(b.idMeal, 10));
+    result.likes.sort((a, b) => parseInt(a.item_id, 10) - parseInt(b.item_id, 10));
+
+    let cards = '';
+
+    result.mealInfo.forEach((el, index) => {
+      const card = `<div class="card">
         <img class="meal-image" src=${el.strMealThumb} alt="img">
         <div class="name-like">
            
@@ -32,27 +31,20 @@ const loadMeals = (arr) => {
        <button id=${el.idMeal} class="comment-button">comment</button>
        <button class="reservation-button">Reservation</button>
    </div>`;
-   cards+=card;
-      })
-      
-        
-        
-      document.querySelector('.container').innerHTML = cards;
-      const element=Array.from(document.querySelectorAll('.heart'))
-      element.forEach(el=>{
-        el.addEventListener("click",(e)=>{
-          addLike(e.target.parentNode.parentNode.parentNode.querySelector(".comment-button").getAttribute('id')); 
-          let numOfLikes= e.target.parentNode.querySelector("p").innerHTML;
-          const  parsevValue=parseInt(numOfLikes);
-          e.target.parentNode.querySelector("p").innerHTML=`${parsevValue+1}`;
-
-        } );
-      });
-      
-
+      cards += card;
     });
-  ;
-  
+
+    document.querySelector('.container').innerHTML = cards;
+    const element = Array.from(document.querySelectorAll('.heart'));
+    element.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        addLike(e.target.parentNode.parentNode.parentNode.querySelector('.comment-button').getAttribute('id'));
+        const numOfLikes = e.target.parentNode.querySelector('p').innerHTML;
+        const parsevValue = parseInt(numOfLikes, 10);
+        e.target.parentNode.querySelector('p').innerHTML = `${parsevValue + 1}`;
+      });
+    });
+  });
 };
 
 export default loadMeals;
