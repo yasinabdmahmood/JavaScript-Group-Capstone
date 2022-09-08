@@ -1,16 +1,16 @@
-import getMealInfo from './getMealInfo.js';
+import getMealInfoArray from './getMealInfoArray.js';
 import heart from '../asset/images/heart-regular.svg';
 import addLike from './addLike.js';
 
 const loadMeals = (arr) => {
      const myPromise = new Promise((myResolve) => {
-      myResolve(getMealInfo());
+      myResolve(getMealInfoArray());
     });
     myPromise.then((result) => {
       result.mealInfo.sort((a,b) => parseInt(a.idMeal)-parseInt(b.idMeal));
       result.likes.sort((a,b) => parseInt(a.item_id)-parseInt(b.item_id));
-      console.log(result.mealInfo);
-      console.log(result.likes);
+      console.log(result.likes)
+      
       let cards=``;
       
       result.mealInfo.forEach((el,index)=>{
