@@ -36,7 +36,7 @@ const loadMeals = () => {
     });
 
     document.querySelector('.container').innerHTML = cards;
-    counter()
+    counter();
     const element = Array.from(document.querySelectorAll('.heart'));
     element.forEach((el) => {
       el.addEventListener('click', (e) => {
