@@ -37,8 +37,12 @@ h1 {
     .logo {
       font-family: 'Lobster', cursive;
       color: orangered;
-      font-size: 50px;
+      font-size: 100px;
       font-style: italic;
+      
+      img{
+        width: 100px;
+      }
     }
   }
 
@@ -48,3 +52,4 @@ h1 {
     border: 5px solid black;
   }
 }
+
