@@ -2,6 +2,8 @@ import getMealInfoArray from './getMealInfoArray.js';
 import heart from '../asset/images/heart-regular.svg';
 import addLike from './addLike.js';
 import counter from './counter.js';
+import displayComment from './displayComment.js';
+import displayReservation from './displayReservation.js';
 
 const loadMeals = () => {
   const myPromise = new Promise((myResolve) => {
@@ -37,6 +39,14 @@ const loadMeals = () => {
 
     document.querySelector('.container').innerHTML = cards;
     counter();
+    const commentButtons=Array.from(document.querySelectorAll('.comment-button'));
+      commentButtons.forEach((el)=>{
+        el.onclick=displayComment;
+      })
+      const reservationButtons=Array.from(document.querySelectorAll('.reservation-button'));
+      reservationButtons.forEach((el,index)=>{
+        el.onclick=displayReservation;
+      })
     const element = Array.from(document.querySelectorAll('.heart'));
     element.forEach((el) => {
       el.addEventListener('click', (e) => {
