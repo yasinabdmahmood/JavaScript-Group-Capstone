@@ -48,7 +48,13 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@DJ_etiya](https://twitter.com/Degisew-mengist)
 - LinkedIn: [jegisew21](https://www.linkedin.com/in/degisew-mengist-003298802)
 
-## 🤝 Contributing
+🤵 **Yaseen**
+
+- GitHub: [yasinabdmahmood](https://yasinabdmahmood.github.io/)
+- Twitter: [@yasenabd7](https://twitter.com/Degisew-mengist)
+- LinkedIn: [yaseen](https://www.linkedin.com/in/yaseen-abd-alwahid-604968232)
+
+## 🤝 Contributing 
 
 Contributions, issues, and feature requests are welcome!
 
