@@ -1,6 +1,6 @@
-const displayComment = (e)=>{
-    const id=e.target.id;
-    console.log(id);
-}
+const displayComment = (e) => {
+  const { id } = e.target;
+  console.log(id);
+};
 
-export default  displayComment;
+export default displayComment;
