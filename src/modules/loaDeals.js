@@ -1,6 +1,7 @@
 import getMealInfoArray from './getMealInfoArray.js';
 import heart from '../asset/images/heart-regular.svg';
 import addLike from './addLike.js';
+import counter from './counter.js';
 
 const loadMeals = () => {
   const myPromise = new Promise((myResolve) => {
@@ -35,6 +36,7 @@ const loadMeals = () => {
     });
 
     document.querySelector('.container').innerHTML = cards;
+    counter()
     const element = Array.from(document.querySelectorAll('.heart'));
     element.forEach((el) => {
       el.addEventListener('click', (e) => {
