@@ -16,8 +16,3 @@ const getMealInfoArray = async () => {
 };
 
 export default getMealInfoArray;
-// const test=async()=>{
-// const response=await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tGV16CMoj3AJeC9Xh2Mu/likes/');
-// const likes = await response.json();
-// console.log(likes)
-// }
