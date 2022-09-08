@@ -1,3 +1,5 @@
 import './SCSS/style.scss';
-import Icon from './asset/images/app_screenshot.png';
+import loadMeals from './modules/loaDeals.js';
+import { idList } from './modules/db.js';
 
+loadMeals(idList);
