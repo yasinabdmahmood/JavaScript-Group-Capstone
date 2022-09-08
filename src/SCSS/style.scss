@@ -65,10 +65,11 @@ h1 {
   padding: 1rem;
   border: 1px solid black;
   box-shadow: 1px 2px 5px 5px rgb(185, 183, 183);
+
   h1 {
     font-family: 'Lobster', cursive;
   }
-} 
+}
 
 .container {
   padding: 1rem;
@@ -76,7 +77,7 @@ h1 {
   flex-wrap: wrap;
   row-gap: 1rem;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 }
 
 .card {
@@ -116,8 +117,9 @@ h1 {
   font-size: 1rem;
   margin: 0.5rem;
 }
+
 @media only screen and (max-width: 768px) {
-  .card{
+  .card {
     width: 100%;
   }
 }
