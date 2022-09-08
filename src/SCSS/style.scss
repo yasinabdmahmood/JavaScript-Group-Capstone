@@ -10,8 +10,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h1 {
-  text-align: center;
+.card img {
+  width: 100%;
+}
+
+.name-like img {
+  width: 30px;
 }
 
 .card img {
@@ -43,7 +47,7 @@ h1 {
     }
 
     .logo {
-      font-family: 'Lobster', cursive;
+      font-family: "Lobster", cursive;
       color: orangered;
       font-size: 100px;
       font-style: italic;
@@ -58,8 +62,34 @@ h1 {
     padding: 10px;
     border: 5px solid black;
   }
+  .comment-popup {
+    display: none;
+    width: 30%;
+  height: 100%;
+  margin: 20px auto;
+  position:fixed;
+  border: 5px solid red;
+  }
+.visible {
+      display: flex;
+      flex-direction: column;
+      //justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+    #form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      #add-comment-btn {
+        width: 80px;
+        align-self: center;
+      }
+      .comment-input {
+        padding: 10px;
+      }
+    }
 }
-
 .container {
   padding: 1rem;
   display: flex;

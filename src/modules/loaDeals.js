@@ -2,8 +2,8 @@ import getMealInfo from './getMealInfo.js';
 import heart from '../asset/images/heart-regular.svg';
 
 const loadMeals = (arr) => {
-  arr.forEach((el) => {
-    const myPromise = new Promise((myResolve) => {
+   arr.forEach((el) => {
+   const myPromise = new Promise((myResolve) => {
       myResolve(getMealInfo(el));
     });
     myPromise.then((mealInfo) => {
