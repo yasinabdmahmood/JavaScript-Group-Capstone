@@ -91,6 +91,7 @@ body {
   bottom: 0;
   margin: auto;
     position:fixed;
+    z-index: 1;
    // border: 5px solid red;
   }
   .comment-popup::-webkit-scrollbar {
