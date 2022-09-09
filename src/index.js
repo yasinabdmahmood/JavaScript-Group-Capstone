@@ -12,7 +12,6 @@ const allCommentBtns = document.querySelectorAll('.comment-button');
 console.log(allCommentBtns);
 allCommentBtns.forEach((eachCommentBtn) => {
     eachCommentBtn.addEventListener('click', () => {
-        console.log(eachCommentBtn.id)
         commentPopup(eachCommentBtn.id);
     });
 });

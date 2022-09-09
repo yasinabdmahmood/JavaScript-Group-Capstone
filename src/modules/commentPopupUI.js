@@ -1,59 +1,128 @@
-const commentPopup = () => {
-  // const popupDiv = document.querySelector(".comment-popup");
-    const mainDiv = document.querySelector(".comment-popup");
-   // mainDiv.className = "inner-comment-popup";
+import { postComment } from "./comment";
+import { fetchComment } from "./comment";
+import { apiBaseUrl } from "./db";
+const mainDiv = document.querySelector(".comment-popup");
+const backdrop = document.querySelector(".comment-backdrop");
+const commentPopup = async (Id) => {
+  const fetchedComments = await fetchComment(Id);
+  console.log(fetchedComments.length);
+  const response = await fetch(apiBaseUrl + Id, {});
+  const meal = await response.json();
 
-    const headerDiv = document.createElement("div");
-    headerDiv.className = "header-div";
-    headerDiv.textContent = "Image";
+  const headerDiv = document.createElement("div");
+  headerDiv.className = "header-div";
+  const headerImage = document.createElement("img");
+  headerImage.className = "header-image";
+  headerImage.src = `${meal.meals[0].strMealThumb}`;
+  const closeBtn = document.createElement("span");
+  closeBtn.id = Id;
+  closeBtn.className = "close-btn";
+  closeBtn.textContent = "X";
+  const title = document.createElement("p");
+  title.id = "title";
+  title.textContent = `${meal.meals[0].strMeal}`;
+  //append header div items
+  headerDiv.append(headerImage);
+  //
+  const aboutDiv = document.createElement("div");
+  aboutDiv.className = "about-div";
+  const mealCategory = document.createElement("b");
+  mealCategory.textContent = `Category: ${meal.meals[0].strCategory}`;
+  //const mealIngredient = document.createElement('p');
+  const mealArea = document.createElement("b");
+  mealArea.textContent = `Area: ${meal.meals[0].strArea}`;
+  aboutDiv.append(mealCategory, mealArea);
+  //comments list
+  const commentDiv = document.createElement("div");
+  const commentTitle = document.createElement("h2");
+  commentTitle.textContent = `Comments(${(fetchedComments.length > 0) ? fetchedComments.length : 0 })`;
+  //fetch comments and itterate throght them and display
+  commentDiv.append(commentTitle);
+  const commentParagraph = document.createElement("p");
+  if(fetchedComments.length > 0) {
+    for (const comment of fetchedComments) {
+      
+      commentParagraph.innerHTML += `<b>${comment.username}:</b> ${comment.comment}<br>`;
+      commentDiv.append(commentParagraph);
+    }
+  }else {
+    commentParagraph.innerHTML = "No comments yet.";
+    commentDiv.append(commentParagraph);
+  }
+  //comment
+  const addCommentDiv = document.createElement("div");
+  const addCommentTitle = document.createElement("h2");
+  addCommentTitle.textContent = "Add a comment";
+  //form
+  const commentForm = document.createElement("form");
+  commentForm.id = "form";
+  const textInput = document.createElement("input");
+  textInput.type = "text";
+  textInput.id = "name-input";
+  textInput.className = "comment-input";
+  textInput.placeholder = "Your name";
+  const textArea = document.createElement("textarea");
+  textArea.placeholder = "Your insights";
+  textArea.className = "comment-input";
+  const error = document.createElement('span');
+  error.id = 'error';
+  error.style.color = "red";
+  const commentBn = document.createElement("button");
+  commentBn.id = `${meal.meals[0].idMeal}`;
+  commentBn.className = "add-comment-btn";
+  commentBn.type = "submit";
+  commentBn.textContent = "Comment";
+  //add everything to form
+  commentForm.append(textInput, textArea, error, commentBn);
+  //append form to formDiv
+  addCommentDiv.append(addCommentTitle, commentForm);
 
-    const headerImage = document.createElement("img");
-    headerImage.className = "header-image";
-    const closeBtn = document.createElement("span");
-    closeBtn.id = "close-btn";
-    closeBtn.textContent = "X";
-    const title = document.createElement("p");
-    title.id = "title";
-    //append header div items
-    headerDiv.append(headerImage, closeBtn);
-    //
-    const aboutDiv = document.createElement("div");
-    aboutDiv.textContent = "Hello"
-    //comments list
+  mainDiv.append(
+    closeBtn,
+    headerDiv,
+    title,
+    aboutDiv,
+    commentDiv,
+    addCommentDiv
+  );
+  backdrop.classList.add("visible");
+  mainDiv.classList.add("visible");
+  document.body.style.overflow = "hidden";
+  return meal;
+};
 
-    const commentDiv = document.createElement("div");
-    commentDiv.textContent = "all comments";
-    const commentTitle = document.createElement("h2");
-    //fetch comments and itterate throght them and display
-    const commentParagraph = document.createElement("p");
-    //append
-    commentDiv.append(commentTitle, commentParagraph);
-    //comment
-    const addCommentDiv = document.createElement("div");
-    const addCommentTitle = document.createElement("h2");
-    addCommentTitle.textContent = "Add a comment";
-    //form
-    const commentForm = document.createElement("form");
-    commentForm.id = "form";
-    const textInput = document.createElement("input");
-    textInput.type = "text";
-    textInput.id = "name-input";
-    textInput.className = "comment-input";
-    textInput.placeholder = "Your name";
-    const textArea = document.createElement("textarea");
-    textArea.placeholder = "Your insights";
-     textArea.className = "comment-input";
-    const commentBn = document.createElement("button");
-    commentBn.id = "add-comment-btn";
-    commentBn.type = "button";
-    commentBn.textContent = "Comment";
-    //add everything to form
-    commentForm.append(textInput, textArea, commentBn);
-    //append form to formDiv
-    addCommentDiv.append(addCommentTitle, commentForm);
+backdrop.addEventListener('click', () => {
+    backdrop.classList.remove("visible");
+    mainDiv.classList.remove("visible");
+    mainDiv.innerHTML = "";
+    document.body.style.overflow = "scroll";
+})
 
-    mainDiv.append(headerDiv, title, aboutDiv, commentDiv, addCommentDiv);
-   mainDiv.classList.add('visible');
-}
-
+mainDiv.addEventListener("click", (e) => {
+  if (e.target.classList.contains("close-btn")) {
+    mainDiv.classList.remove("visible");
+    backdrop.classList.remove("visible");
+    mainDiv.innerHTML = "";
+    document.body.style.overflow = "scroll";
+  } else if (e.target.classList.contains("add-comment-btn")) {
+    e.preventDefault();
+   
+    if (
+      document.getElementById("name-input").value !== "" &&
+      document.querySelector("textarea").value !== ""
+    ){
+       document.getElementById("error").innerHTML = "";
+      postComment({
+        item_id: e.target.id,
+        username: document.getElementById("name-input").value,
+        comment: document.querySelector("textarea").value,
+      });
+ document.getElementById("name-input").value = "";
+ document.querySelector("textarea").value = "";
+    }
+else {
+      document.getElementById('error').innerHTML = "Fields can't be empty";
+    }
+  }
+});
 export { commentPopup };

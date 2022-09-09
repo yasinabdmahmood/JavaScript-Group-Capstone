@@ -1,7 +1,7 @@
 
 const url = 
 "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tGV16CMoj3AJeC9Xh2Mu/comments/";
-const postComment = async (formData) => {
+const postComment = async (formData = {}) => {
 
   const response = await fetch(url, {
     method: "post",
@@ -12,13 +12,15 @@ const postComment = async (formData) => {
   });
 }
 
-const fetchComment = async () => {
-  //    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/meals/${mealId}/comments/`;
-   return await fetch(url, {
+const fetchComment = async (itemId) => {
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tGV16CMoj3AJeC9Xh2Mu/comments?item_id=${itemId}`;
+   const res = await fetch(url, {
         headers: {
             "Content-Type": "application/json",
         }
-    })
+    });
+    const data = await res.json();
+    return  data;
 }
 
 export { postComment, fetchComment };
