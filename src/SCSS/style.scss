@@ -72,6 +72,7 @@ body {
   left: 0;
 }
 
+
 .comment-backdrop.visible {
   display: block;
   padding-left: 15px;
@@ -141,8 +142,17 @@ body {
     }
   }
 }
-.counter h1 {
-  font-family: "Lato", sans-serif;
+
+.counter {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid black;
+  box-shadow: 1px 2px 5px 5px rgb(185, 183, 183);
+
+  h1 {
+    font-family: 'Lobster', cursive;
+  }
+
 }
 
 .container {
@@ -151,6 +161,7 @@ body {
   flex-wrap: wrap;
   row-gap: 1rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .card {
@@ -170,7 +181,8 @@ body {
 }
 
 .name-like span {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Lobster', cursive;
   font-weight: 700;
 }
 
@@ -188,4 +200,10 @@ body {
   padding: 0.5rem;
   font-size: 1rem;
   margin: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
 }

@@ -38,7 +38,8 @@ const loadMeals = () => {
     });
 
     document.querySelector('.container').innerHTML = cards;
-    counter();
+    const itemNumber = counter();
+    document.querySelector('.counter h1').innerHTML = `Total number of items : ${itemNumber} `;
     const commentButtons = Array.from(document.querySelectorAll('.comment-button'));
     commentButtons.forEach((el) => {
       el.addEventListener('click', () =>{

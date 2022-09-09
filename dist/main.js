@@ -16,7 +16,9 @@
   \**********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);\"]);\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css?family=Lobster:regular);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  margin: 0;\\n  padding: 0;\\n}\\n\\nbody {\\n  font-family: \\\"Poppins\\\", sans-serif;\\n}\\n\\n.card img {\\n  width: 100%;\\n}\\n\\n.name-like img {\\n  width: 30px;\\n}\\n\\n.card img {\\n  width: 100%;\\n}\\n\\n.name-like img {\\n  width: 30px;\\n}\\n\\n.main-container #header {\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n  padding-left: 10px;\\n  padding-right: 10px;\\n  box-shadow: 1px 2px 5px 5px rgb(185, 183, 183);\\n  min-height: 60px;\\n}\\n.main-container #header .nav-links {\\n  font-size: 20px;\\n  display: flex;\\n  column-gap: 20px;\\n}\\n.main-container #header .nav-links a {\\n  text-decoration-line: none;\\n}\\n.main-container #header .logo {\\n  font-family: \\\"Lobster\\\", cursive;\\n  color: orangered;\\n  font-size: 100px;\\n  font-style: italic;\\n}\\n.main-container #header .logo img {\\n  width: 100px;\\n}\\n.main-container footer {\\n  padding: 10px;\\n  border: 5px solid black;\\n}\\n.main-container .comment-popup {\\n  display: none;\\n  padding: 10px;\\n  width: 30%;\\n  height: 100%;\\n  margin: 20px auto;\\n  position: fixed;\\n  border: 5px solid red;\\n}\\n.main-container .visible {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  background-color: #fff;\\n}\\n.main-container #close-btn {\\n  align-self: flex-end;\\n  font-size: 50px;\\n  font-weight: bolder;\\n}\\n.main-container .header-div {\\n  display: flex;\\n  width: 100%;\\n}\\n.main-container .header-div .header-image {\\n  width: 100%;\\n  height: 200px;\\n}\\n.main-container #form {\\n  display: flex;\\n  flex-direction: column;\\n  row-gap: 20px;\\n}\\n.main-container #form #add-comment-btn {\\n  width: 80px;\\n  align-self: center;\\n}\\n.main-container #form .comment-input {\\n  padding: 10px;\\n}\\n\\n.counter h1 {\\n  font-family: \\\"Lato\\\", sans-serif;\\n}\\n\\n.container {\\n  padding: 1rem;\\n  display: flex;\\n  flex-wrap: wrap;\\n  row-gap: 1rem;\\n  justify-content: space-between;\\n}\\n\\n.card {\\n  width: 32%;\\n  display: flex;\\n  box-sizing: border-box;\\n  flex-direction: column;\\n  padding: 2rem;\\n  background-color: lightblue;\\n  border-radius: 2rem;\\n}\\n\\n.name-like {\\n  margin: 1rem;\\n  display: flex;\\n  justify-content: space-between;\\n}\\n\\n.name-like span {\\n  font-size: 1rem;\\n  font-weight: 700;\\n}\\n\\n.like p {\\n  font-weight: 700;\\n}\\n\\n.comment-button {\\n  padding: 0.5rem;\\n  font-size: 1rem;\\n  margin: 0.5rem;\\n}\\n\\n.reservation-button {\\n  padding: 0.5rem;\\n  font-size: 1rem;\\n  margin: 0.5rem;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://javascript-group-capstone/./src/SCSS/style.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+
 
 /***/ }),
 
@@ -146,7 +148,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst counter = () => {\r\n  const itemNumber = document.querySelectorAll('.card').length;\r\n  document.querySelector('.counter h1').innerHTML = `Total number of items : ${itemNumber} `;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (counter);\n\n//# sourceURL=webpack://javascript-group-capstone/./src/modules/counter.js?");
+
 
 /***/ }),
 
@@ -156,7 +160,20 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"apiBaseUrl\": () => (/* binding */ apiBaseUrl),\n/* harmony export */   \"idList\": () => (/* binding */ idList)\n/* harmony export */ });\nconst idList = ['52982', '52854', '52861', '52806', '52881', '52883', '52846', '52927', '52928', '52912'];\r\nconst apiBaseUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';\r\n\r\n\n\n//# sourceURL=webpack://javascript-group-capstone/./src/modules/db.js?");
+
+
+/***/ }),
+
+/***/ "./src/modules/displayComment.js":
+/*!***************************************!*\
+  !*** ./src/modules/displayComment.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst displayComment = (e) => {\n  const { id } = e.target;\n  console.log(id);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayComment);\n\n//# sourceURL=webpack://javascript-group-capstone/./src/modules/displayComment.js?");
+
 
 /***/ }),
 
@@ -168,6 +185,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst displayReservation = (e) => {\r\n  const { id } = e.target.parentNode.querySelector('.comment-button');\r\n\r\n  console.log(id);\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayReservation);\n\n//# sourceURL=webpack://javascript-group-capstone/./src/modules/displayReservation.js?");
 
+
+
 /***/ }),
 
 /***/ "./src/modules/getMealInfoArray.js":
@@ -178,6 +197,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _db_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./db.js */ \"./src/modules/db.js\");\n\r\n\r\nconst getMealInfoArray = async () => {\r\n  const mealInfo = [];\r\n  _db_js__WEBPACK_IMPORTED_MODULE_0__.idList.forEach(async (ele) => {\r\n    const response = await fetch(_db_js__WEBPACK_IMPORTED_MODULE_0__.apiBaseUrl + ele);\r\n    const { meals } = await response.json();\r\n    const info = meals[0];\r\n    mealInfo.push(info);\r\n  });\r\n\r\n  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tGV16CMoj3AJeC9Xh2Mu/likes/');\r\n  const likes = await response.json();\r\n\r\n  return { likes, mealInfo };\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getMealInfoArray);\r\n\n\n//# sourceURL=webpack://javascript-group-capstone/./src/modules/getMealInfoArray.js?");
 
+
 /***/ }),
 
 /***/ "./src/modules/loaDeals.js":
@@ -186,7 +206,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _getMealInfoArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getMealInfoArray.js */ \"./src/modules/getMealInfoArray.js\");\n/* harmony import */ var _asset_images_heart_regular_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../asset/images/heart-regular.svg */ \"./src/asset/images/heart-regular.svg\");\n/* harmony import */ var _addLike_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addLike.js */ \"./src/modules/addLike.js\");\n/* harmony import */ var _counter_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./counter.js */ \"./src/modules/counter.js\");\n/* harmony import */ var _displayReservation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./displayReservation.js */ \"./src/modules/displayReservation.js\");\n/* harmony import */ var _commentPopupUI_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./commentPopupUI.js */ \"./src/modules/commentPopupUI.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst loadMeals = () => {\r\n  const myPromise = new Promise((myResolve) => {\r\n    myResolve((0,_getMealInfoArray_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\r\n  });\r\n  myPromise.then((result) => {\r\n    result.mealInfo.sort((a, b) => parseInt(a.idMeal, 10) - parseInt(b.idMeal, 10));\r\n    result.likes.sort((a, b) => parseInt(a.item_id, 10) - parseInt(b.item_id, 10));\r\n\r\n    let cards = '';\r\n\r\n    result.mealInfo.forEach((el, index) => {\r\n            const card = `<div class=\"card\">\r\n        <img class=\"meal-image\" src=${el.strMealThumb} alt=\"img\">\r\n        <div class=\"name-like\">\r\n           \r\n       \r\n           <span>${el.strMeal}</span>\r\n           \r\n         <div class='like'>\r\n       \r\n       <img src=${_asset_images_heart_regular_svg__WEBPACK_IMPORTED_MODULE_1__} class=\"heart\" alt=\"\"> \r\n       <p>${result.likes[index].likes}</p>\r\n       <p>Likes</p>\r\n       </div> \r\n\r\n       </div>\r\n       <button id=${el.idMeal} class=\"comment-button\">comment</button>\r\n       <button class=\"reservation-button\">Reservation</button>\r\n   </div>`;\r\n      cards += card;\r\n    });\r\n\r\n    document.querySelector('.container').innerHTML = cards;\r\n    (0,_counter_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n    const commentButtons = Array.from(document.querySelectorAll('.comment-button'));\r\n    commentButtons.forEach((el) => {\r\n      el.addEventListener('click', () =>{\r\n        (0,_commentPopupUI_js__WEBPACK_IMPORTED_MODULE_5__.commentPopup)(el.id);\r\n      \r\n      });\r\n    });\r\n   const allCloseBtns = document.querySelectorAll('#close-btn');\r\n   allCloseBtns.forEach((btn) => {\r\n     btn.addEventListener('click', (e) => {\r\n      e.target.parentNode.remove();\r\n     });\r\n   })\r\n    const reservationButtons = Array.from(document.querySelectorAll('.reservation-button'));\r\n    reservationButtons.forEach((el) => {\r\n      el.onclick = _displayReservation_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"];\r\n    });\r\n    const element = Array.from(document.querySelectorAll('.heart'));\r\n    element.forEach((el) => {\r\n      el.addEventListener('click', (e) => {\r\n        (0,_addLike_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(e.target.parentNode.parentNode.parentNode.querySelector('.comment-button').getAttribute('id'));\r\n        const numOfLikes = e.target.parentNode.querySelector('p').innerHTML;\r\n        const parsevValue = parseInt(numOfLikes, 10);\r\n        e.target.parentNode.querySelector('p').innerHTML = `${parsevValue + 1}`;\r\n      });\r\n    });\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadMeals);\n\n//# sourceURL=webpack://javascript-group-capstone/./src/modules/loaDeals.js?");
+
 
 /***/ }),
 
