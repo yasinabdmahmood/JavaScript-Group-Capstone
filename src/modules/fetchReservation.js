@@ -1,6 +1,5 @@
 import reserve from "./addReservation";
 import { apiBaseUrl } from "./db";
-import getMealInfo from "./getMealInfo";
 import grabber from "./grabber";
 const form = document.forms["reservationForm"];
 
