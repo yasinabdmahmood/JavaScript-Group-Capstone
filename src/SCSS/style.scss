@@ -80,6 +80,7 @@ body {
 }
   .comment-popup {
     display: none;
+    overflow: auto;
     padding: 10px;
     width: 35%;
     height: 95%;
@@ -91,6 +92,10 @@ body {
     position:fixed;
    // border: 5px solid red;
   }
+  .comment-popup::-webkit-scrollbar {
+    display: none;
+  }
+
   .visible {
     display: flex;
     flex-direction: column;

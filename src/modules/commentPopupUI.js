@@ -1,14 +1,14 @@
 import { postComment } from "./comment";
 import { fetchComment } from "./comment";
 import { apiBaseUrl } from "./db";
+import commentCounter from "./commentCounter";
 const mainDiv = document.querySelector(".comment-popup");
 const backdrop = document.querySelector(".comment-backdrop");
 const commentPopup = async (Id) => {
-  const fetchedComments = await fetchComment(Id);
-  console.log(fetchedComments.length);
+  var fetchedComments = await fetchComment(Id);
   const response = await fetch(apiBaseUrl + Id, {});
   const meal = await response.json();
-
+  await commentCounter(Id);
   const headerDiv = document.createElement("div");
   headerDiv.className = "header-div";
   const headerImage = document.createElement("img");
@@ -34,7 +34,9 @@ const commentPopup = async (Id) => {
   aboutDiv.append(mealCategory, mealArea);
   //comments list
   const commentDiv = document.createElement("div");
+  commentDiv.className = "comment-container";
   const commentTitle = document.createElement("h2");
+  commentTitle.className = "comment-title";
   commentTitle.textContent = `Comments(${(fetchedComments.length > 0) ? fetchedComments.length : 0 })`;
   //fetch comments and itterate throght them and display
   commentDiv.append(commentTitle);
@@ -47,10 +49,11 @@ const commentPopup = async (Id) => {
     }
   }else {
     commentParagraph.innerHTML = "No comments yet.";
-    commentDiv.append(commentParagraph);
+    //commentDiv.append(commentParagraph);
   }
   //comment
   const addCommentDiv = document.createElement("div");
+  
   const addCommentTitle = document.createElement("h2");
   addCommentTitle.textContent = "Add a comment";
   //form
@@ -117,6 +120,15 @@ mainDiv.addEventListener("click", (e) => {
         username: document.getElementById("name-input").value,
         comment: document.querySelector("textarea").value,
       });
+      const name = document.getElementById("name-input").value;
+      const comment = document.querySelector("textarea").value;
+      const p = document.createElement("p");
+      p.innerHTML = `<b>${name}:</b>  ${comment}`;
+      document.querySelector(".comment-container").appendChild(p);
+      const commentCounter = document.querySelector(".comment-container").children.length;
+      //const commentCounterP = document.createElement('p');
+    //commentCounterP.innerHTML = `Comments(${commentCounter})`;
+ document.querySelector(".comment-title").innerHTML = `Comments(${commentCounter})`;
  document.getElementById("name-input").value = "";
  document.querySelector("textarea").value = "";
     }
