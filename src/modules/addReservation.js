@@ -1,3 +1,5 @@
+import fetchReservations from "./fetchReservation";
+
 const reserve = async (url, data) => {
   const post = {
     method: "POST",
@@ -7,7 +9,7 @@ const reserve = async (url, data) => {
     body: JSON.stringify(data),
   };
     await fetch(url, post);
-    
+     fetchReservations(url, data.item_id);
   console.log(url);
 };
 
