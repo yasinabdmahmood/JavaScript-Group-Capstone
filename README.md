@@ -53,7 +53,13 @@ this project is deployed from github pages.
 🤵 **Yaseen**
 
 - GitHub: [yasinabdmahmood](https://yasinabdmahmood.github.io/)
-- Twitter: [@yasenabd7](https://twitter.com/Degisew-mengist)
+- Twitter: [@yasenabd7](https://twitter.com/yasinabdmahmood)
+- LinkedIn: [yaseen](https://www.linkedin.com/in/yaseen-abd-alwahid-604968232)
+
+🤵 **Davian**
+
+- GitHub: [Davian](https://Dadadon.github.io/)
+- Twitter: [@yasenabd7](https://twitter.com/Dadadon)
 - LinkedIn: [yaseen](https://www.linkedin.com/in/yaseen-abd-alwahid-604968232)
 
 ## 🤝 Contributing 
