@@ -1,4 +1,4 @@
-// import counter from "../modules/counter.js";
+// The function to be tested
 const counter = () => {
   const itemNumber = document.querySelectorAll('.card').length;
   return itemNumber;

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import reserve from "./addReservation.js";
+import countReservations from "./countReservation.js";
 import { apiBaseUrl } from "./db.js";
 import grabber from "./grabber.js";
 
@@ -30,9 +31,8 @@ const fetchReservations = async (url, id) => {
   const response = await fetch(apiUrl);
   const data = await response.json();
 
-  const resCount = [data.length, "Reservations"];
-  grabber("reservationModalLongTitle").innerText = resCount.join(" ");
-  grabber("list-contents").innerHTML = "";
+  
+   grabber("list-contents").innerHTML = "";
   const container = document.createElement("ul");
   container.classList = "border border-dark p-0 m-0 list ";
   data.forEach((item) => {
@@ -47,6 +47,9 @@ const fetchReservations = async (url, id) => {
     container.appendChild(element);
   });
   grabber("list-contents").appendChild(container);
-};
+  const reservationNumber=countReservations();
+  const resCount2 = [reservationNumber, "Reservations"];
+  grabber("reservationModalLongTitle").innerText = resCount2.join(" ");
+ };
 
 export default fetchReservations;
