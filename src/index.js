@@ -2,7 +2,7 @@ import './SCSS/style.scss';
 import loadMeals from './modules/loaDeals.js';
 import { idList } from './modules/db.js';
 import commentPopup from './modules/commentPopupUI.js';
-import implementScrollUp from './modules/implementScrollUp.js'
+import implementScrollUp from './modules/implementScrollUp.js';
 
 loadMeals(idList);
 
