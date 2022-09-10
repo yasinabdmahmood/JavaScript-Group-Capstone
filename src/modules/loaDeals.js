@@ -3,7 +3,7 @@ import heart from '../asset/images/heart-regular.svg';
 import addLike from './addLike.js';
 import counter from './counter.js';
 import displayReservation from './displayReservation.js';
-import { commentPopup } from './commentPopupUI.js';
+import commentPopup from './commentPopupUI.js';
 
 const loadMeals = () => {
   const myPromise = new Promise((myResolve) => {
@@ -16,7 +16,7 @@ const loadMeals = () => {
     let cards = '';
 
     result.mealInfo.forEach((el, index) => {
-            const card = `<div class="card">
+      const card = `<div class="card">
         <img class="meal-image" src=${el.strMealThumb} alt="img">
         <div class="name-like">
            
@@ -42,9 +42,8 @@ const loadMeals = () => {
     document.querySelector('.counter h1').innerHTML = `Total number of items : ${itemNumber} `;
     const commentButtons = Array.from(document.querySelectorAll('.comment-button'));
     commentButtons.forEach((el) => {
-      el.addEventListener('click', () =>{
+      el.addEventListener('click', () => {
         commentPopup(el.id);
-      
       });
     });
     const reservationButtons = Array.from(document.querySelectorAll('.reservation-button'));

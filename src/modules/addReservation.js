@@ -1,4 +1,5 @@
-import fetchReservations from "./fetchReservation";
+/* eslint-disable */
+import fetchReservations from "./fetchReservation.js";
 
 const reserve = async (url, data) => {
   const post = {
@@ -8,9 +9,8 @@ const reserve = async (url, data) => {
     },
     body: JSON.stringify(data),
   };
-    await fetch(url, post);
-     fetchReservations(url, data.item_id);
-  console.log(url);
+  await fetch(url, post);
+  fetchReservations(url, data.item_id);
 };
 
 export default reserve;

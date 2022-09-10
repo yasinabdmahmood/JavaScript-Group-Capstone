@@ -1,4 +1,2 @@
-const grabber = (e) => {
-  return document.getElementById(e);
-};
+const grabber = (e) => document.getElementById(e);
 export default grabber;

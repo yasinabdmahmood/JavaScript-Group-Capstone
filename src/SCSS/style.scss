@@ -18,14 +18,6 @@ body {
   width: 30px;
 }
 
-.card img {
-  width: 100%;
-}
-
-.name-like img {
-  width: 30px;
-}
-
 .main-container {
   #header {
     display: flex;
@@ -62,38 +54,41 @@ body {
     padding: 10px;
     border: 5px solid black;
   }
+
   .comment-backdrop {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: fixed;
-  pointer-events: all;
-  top: 0;
-  left: 0;
-}
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    pointer-events: all;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 
+  .comment-backdrop.visible {
+    display: block;
+    padding-left: 15px;
+    background-color: rgba(27, 27, 40, 0.95);
+    pointer-events: all;
+  }
 
-.comment-backdrop.visible {
-  display: block;
-  padding-left: 15px;
-  background-color: rgba(27, 27, 40, 0.95);
-  pointer-events: all;
-}
   .comment-popup {
     display: none;
     overflow: auto;
     padding: 10px;
     width: 35%;
     height: 95%;
-   left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
     z-index: 1;
-   // border: 5px solid red;
+    // border: 5px solid red;
   }
+
   .comment-popup::-webkit-scrollbar {
     display: none;
   }
@@ -105,39 +100,46 @@ body {
     border-radius: 15px;
     background-color: #fff;
   }
+
   .close-btn {
-      align-self: flex-end;
-      font-size: 50px;
-      font-weight: bolder;
-      cursor: pointer;
-    }
+    align-self: flex-end;
+    font-size: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
   .header-div {
     display: flex;
     width: 100%;
+
     .header-image {
       width: 100%;
       height: 200px;
     }
   }
+
   #title {
     font-weight: 700;
     font-size: 30px;
   }
+
   .about-div {
     display: flex;
     width: 100%;
     flex-direction: column;
     padding-top: 20px;
-
   }
+
   #form {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+
     #add-comment-btn {
       width: 80px;
       align-self: center;
     }
+
     .comment-input {
       padding: 10px;
     }
@@ -153,7 +155,6 @@ body {
   h1 {
     font-family: 'Lobster', cursive;
   }
-
 }
 
 .container {
