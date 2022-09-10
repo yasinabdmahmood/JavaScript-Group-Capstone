@@ -15,9 +15,9 @@ This project is created using HTML5,SCSS and JavaScript with TheMealDB API that 
 - TheMealDB API
 
 ![](https://github.com/yasinabdmahmood/JavaScript-Group-Capstone/blob/dev/screen.png)
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://yasinabdmahmood.github.io/JavaScript-Group-Capstone/dist/)
 
 
 ## Getting Started
