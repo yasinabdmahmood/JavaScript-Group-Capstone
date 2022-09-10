@@ -59,8 +59,8 @@ this project is deployed from github pages.
 🤵 **Davian**
 
 - GitHub: [Davian](https://Dadadon.github.io/)
-- Twitter: [@yasenabd7](https://twitter.com/Dadadon)
-- LinkedIn: [yaseen](https://www.linkedin.com/in/yaseen-abd-alwahid-604968232)
+- Twitter: [@Davian](https://twitter.com/Dadadon)
+- LinkedIn: [Davian](https://www.linkedin.com/in/yaseen-abd-alwahid-604968232)
 
 ## 🤝 Contributing 
 
