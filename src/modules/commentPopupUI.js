@@ -9,6 +9,7 @@ const commentPopup = async (Id) => {
   const fetchedComments = await fetchComment(Id);
   const response = await fetch(apiBaseUrl + Id, {});
   const meal = await response.json();
+  mainDiv.innerHTML = "";
   const headerDiv = document.createElement("div");
   headerDiv.className = "header-div";
   const headerImage = document.createElement("img");
