@@ -1,8 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> Description the project.
+# TheMealDB API Capstone
+This project is created using HTML5,SCSS and JavaScript with TheMealDB API that accesses the meals from the api and displays it. some of the features are: user can see the meals and add and see his/her comment.The user can also reserve the meals. 
 
 
 ## Built With
@@ -14,6 +13,8 @@
 - Webpack bundler
 - Kanban Board
 - TheMealDB API
+
+![](https://github.com/yasinabdmahmood/JavaScript-Group-Capstone/blob/dev/screen.png)
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
@@ -21,25 +22,26 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
+open your terminal and type
+
+ git clone <URL> https://github.com/yasinabdmahmood/JavaScript-Group-Capstone
+    
+    git checkout dev
+
 ### Prerequisites
-
-### Setup
-
+- before you start you should have git installed on your machine. 
+## setup to start
+      npm install
+      npm run start
 ### Install
-
-### Usage
-
+ npm install jest and webpack.
 ### Run tests
+npm run test
 
 ### Deployment
-
-
+this project is deployed from github pages.
 
 ## Authors
 
@@ -65,10 +67,10 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+- Microverse.org
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- my coding partners
+- 
 
 ## 📝 License
 
